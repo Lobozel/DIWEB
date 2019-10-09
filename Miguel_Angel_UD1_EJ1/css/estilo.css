@@ -17,13 +17,13 @@ p {
 }
 .imgLeft {
     float:left;
-    margin-left: 48px;
+    margin-left: 38px;
     margin-right: 10px;
 }
 .imgRight {
     float: right;;
     margin-left: 10px;
-    margin-right: 28px;
+    margin-right: 35px;
 }
 #logo{
     float: right;
