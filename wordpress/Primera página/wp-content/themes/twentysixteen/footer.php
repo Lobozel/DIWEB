@@ -51,14 +51,14 @@
 					 */
 					do_action( 'twentysixteen_credits' );
 				?>
-<!-- 				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span> -->
+				
 				<?php
 				if ( function_exists( 'the_privacy_policy_link' ) ) {
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
 				?>
-				<a href="<?php echo esc_url(home_url( '/' ) ); ?>" class="imprint">
-					<?php printf( '@Copyright 2019 | @autor Miguel Ángel' ); ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="imprint">
+					<?php printf( '@Copyright 2019 | Miguel Ángel López Sánchez' ); ?>
 				</a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
