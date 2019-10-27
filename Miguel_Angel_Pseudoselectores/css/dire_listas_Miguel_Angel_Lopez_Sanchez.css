@@ -1,0 +1,62 @@
+
+body{
+    font-family: Arial, Verdana;
+    font-size: 12px;
+}
+
+#cabecera div {
+    background-color: chartreuse;
+    
+}
+
+/*div cabecera*/
+
+	/*color de fondo: verde claro*/
+	/*margen interno 15px*/
+
+	
+/*div central*/	
+
+	/*margen superior 2px*/
+	/*margen inferior 5px*/
+
+/*lista1*/
+
+	/*sin símbolo de lista*/
+	/*sin márgenes internos y externos*/
+
+
+/*lista2*/
+
+	/*sin símbolo de lista*/
+	/*sin márgenes internos y externos*/
+
+/*Los li de lista2 */
+
+	/*color de fondo gris*/
+	/*borde de 1px continuo y negro*/
+	/*ancho 20%*/
+
+/*lista3*/
+
+	/*sin símbolo de lista*/
+	/*sin márgenes internos y externos*/
+
+/*Los elementos li de lista3*/
+
+	/*posicionados en línea*/
+	/*color de fondo gris*/
+	/*margen interno:2px*/
+	/*borde 1px continuo negro de */
+
+
+/* los elementos de li de lista3 al pasar por encima, color de fondo: blanco */
+
+/* los enlaces de lista3 al pasar por encima, color negro, color de fondo blanco */
+
+
+/* Los enlaces de lista3 color negro, sin subrayado*/
+
+
+/*div pie: limpiar en todos los lados, texto centrado, color de fondo verde*/
+
