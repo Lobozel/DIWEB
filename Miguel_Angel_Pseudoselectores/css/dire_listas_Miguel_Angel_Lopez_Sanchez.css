@@ -4,59 +4,55 @@ body{
     font-size: 12px;
 }
 
-#cabecera div {
+div#cabecera {
     background-color: chartreuse;
-    
+    padding: 15px;
 }
 
-/*div cabecera*/
+div#central {
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
 
-	/*color de fondo: verde claro*/
-	/*margen interno 15px*/
+#lista1, #lista2, #lista3 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
-	
-/*div central*/	
+#lista2 li {
+	background-color: gray;
+	border: 1px black solid;
+}
 
-	/*margen superior 2px*/
-	/*margen inferior 5px*/
+#lista3 li {
+	display: inline;
+	background-color: gray;
+	padding: 2px;
+	border: 1px black solid;
+}
 
-/*lista1*/
+#lista3 li:hover{
+	background-color: white;
+}
 
-	/*sin símbolo de lista*/
-	/*sin márgenes internos y externos*/
+#lista3 a:hover{
+	color: black;
+	background-color: white;
+}
 
+#lista3 a {
+	color: white;
+	text-decoration:none;
+}
 
-/*lista2*/
+div#pie{
+	overflow: hidden;
+	text-align: center;
+	background-color: green;
+}
 
-	/*sin símbolo de lista*/
-	/*sin márgenes internos y externos*/
-
-/*Los li de lista2 */
-
-	/*color de fondo gris*/
-	/*borde de 1px continuo y negro*/
-	/*ancho 20%*/
-
-/*lista3*/
-
-	/*sin símbolo de lista*/
-	/*sin márgenes internos y externos*/
-
-/*Los elementos li de lista3*/
-
-	/*posicionados en línea*/
-	/*color de fondo gris*/
-	/*margen interno:2px*/
-	/*borde 1px continuo negro de */
-
-
-/* los elementos de li de lista3 al pasar por encima, color de fondo: blanco */
-
-/* los enlaces de lista3 al pasar por encima, color negro, color de fondo blanco */
-
-
-/* Los enlaces de lista3 color negro, sin subrayado*/
-
-
-/*div pie: limpiar en todos los lados, texto centrado, color de fondo verde*/
-
+div img {
+	display:block;
+	margin: 0 auto;
+}
