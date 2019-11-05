@@ -1,0 +1,115 @@
+/*INDICA LAS PROPIEDADES QUE SE SOLICITAN*/
+/*Todo el documento
+   familia de fuentes: Arial, Helvetica, sans-serif
+*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+   
+/*etiqueta legend
+    tamaño de fuente: 2em
+    margen inferior: 20px
+	ancho: 100%
+    flotar: izquierda
+*/
+legend {
+    font-size: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+    float: left;
+}
+/*etiqueta fieldset
+    ancho: 80%
+    margen interior: 3%
+    borde: 1px solid #aaa
+    color de fondo: #c2c2c2
+    margen inferior: 20px
+    caja con sombra: 2px 2px 5px gray
+    bordes redondeados: 3px
+*/
+fieldset {
+    width: 80%;
+    padding: 3%;
+    border: 1px solid #aaa;
+    background-color: #c2c2c2;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 5px gray;
+    border-radius: 3px;
+}
+/* etiqueta label 
+    ancho: 40%
+    flotar: left
+*/
+label {
+    width: 40%;
+    float: left;
+}
+/* etiqueta input[type=submit] 
+    margen inferior: 10px
+    visualizar como un bloque 
+    ancho: 50%
+*/
+input[type=submit]{
+    margin-bottom: 10px;
+    display: block;
+    width: 50%;
+}
+/* etiquetas input y textarea 
+    alto: 20px
+    ancho: 50%
+    flotar: right
+    bordes: 1px solid #bfbfbf
+    margen interior: 0.2em
+    fondo con  gradiente lineal (top, #ffffff 0%,#ededed 8%,#ffffff, 100%)
+    bordes redondeados: 3px
+*/
+input, textarea {
+    height: 20px;
+    width: 50%;
+    float: right;
+    border: 1px solid #bfbfbf;
+    margin-bottom: 0.2em;
+    background:linear-gradient(top, #ffffff 0%,#ededed 8%,#ffffff, 100%);
+    border-radius: 3px;
+}
+/* etiquetas div de form 
+    limpiar por todos los lados
+*/
+form div {
+    clear: both;
+}
+/* etiquetas input requirda
+    bordes: 1px solid black
+    negrita
+*/
+input:required {
+   border: 1px solid black;
+   font-weight: bold;   
+}
+/* al poner el foco en input y textarea 
+    bordes: 2px solid cadetblue
+    color de fondo: lightblue
+*/
+input:focus, textarea:focus{
+    border: 2px solid cadetblue;
+    background-color: lightblue;
+}
+/* cuando se valida al poner el foco en input y textarea 
+    color: green
+    color de fondo: lightgreen
+*/
+input:focus:valid, textarea:focus:valid{
+    color: green;
+    background-color: lightgreen;
+}
+/* cuando no se valida al poner el foco en input y textarea  
+    color: darkred
+    bordes: 2px solid red
+    color de fondo: indianred
+*/
+input:focus:invalid, textarea:focus:invalid{
+    color: darkred;
+    border: 2px solid red;
+    background-color: indianred;
+    
+}
