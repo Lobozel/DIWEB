@@ -113,3 +113,8 @@ input:focus:invalid, textarea:focus:invalid{
     background-color: indianred;
     
 }
+
+#avatar{
+    float: right;
+    margin-right: 50px;
+}
