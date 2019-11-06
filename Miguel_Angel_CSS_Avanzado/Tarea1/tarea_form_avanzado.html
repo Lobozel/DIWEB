@@ -10,20 +10,31 @@
         <h1>CSS: forms</h1>
     </header>
     <main>
+        <!-- Section remarca el contenido principal de la página-->
 <section>
  <article>
    <h3>Forms</h3>
 <img id='avatar' src="img/foto.jpg">
 
 <form>
+    <!-- fieldset (grupo de campos) permite organizar en grupos los campos de un formulario. -->
  <fieldset>
+     <!-- legend crea un título para un grupos los campos (<fieldset>) de un formulario. -->
    <legend>Sign up</legend>
     <div>
+        <!--label representa una etiqueta para un elemento en una interfaz de usuario.
+            Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for,
+            o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado"
+            del elemento label. -->
         <label for="email">Email</label>
+        <!-- el atributo autofocus pone el cursor de manera activa en un input del formulario -->
+        <!-- el atributo placeholder permite al usuario ver una especie de leyenda o label dentro del input. -->
         <input id="email" name="email" autofocus="true" placeholder="Put your email" minlength="4" type="email" />
     </div>
     <div>
         <label for="password">Password</label>
+        <!-- el atributo pattern sirve para ayudarnos a validar lo que introducimos en un input-->
+        <!-- el atributo required permite comprobar que el campo se ha rellenado antes de enviar los datos -->
         <input id="password" name="password" placeholder="Insert password" pattern="[0-9A-Za-z]{8,}" minlength="8"  required="true" type="password"/>
     </div>
     <div>
