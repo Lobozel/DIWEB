@@ -1,0 +1,52 @@
+div#container{
+	margin: 0 auto;
+	width: 800px;
+}
+
+div#cabecera{
+	height: 200px;
+	width: 100%;
+	background-color: red;
+}
+
+div#lateral{
+	left: 2px;
+	top:204px;
+	width:200px;
+	height:200px;
+	background-color: yellow;
+	float: left;
+}
+
+div#lateralderecho{
+	right: 0px;
+	left: 204px;
+	width: 200px;
+	height: 200px;
+	background-color: #90ee90;
+	float: right;
+}
+
+div#principal{
+	height:200px;
+	background-color: #d3d3d3;
+	margin-left: 200px;
+	margin-right: 200px;
+	margin-bottom: 10px;
+	right: -201px;
+	top: 204px;
+}
+
+div#pie{
+	width:100%;
+	height:100px;
+	bottom:0px;
+	background-color: #add8e6;
+	clear: both;
+}
+
+div img {
+	display:block;
+	margin: 0 auto;
+}
+
