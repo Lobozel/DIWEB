@@ -1,0 +1,40 @@
+body {
+    color: #fff;
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+#nubes{
+    left: -100px;
+    position: relative;
+    width:120%;
+    height:500px;
+    background-image: url(../img/nubes.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#contenedor{
+    left: -10px;
+    width: 120%;
+    position: relative;
+    background-color: black;
+}
+
+#panel, .footer{
+    margin:auto;
+    margin-left: 80px;
+    margin-top:10px;
+    text-align:center;
+    width:75%;
+    padding-top:10px;
+    margin-bottom: -10px;
+}
+
+.imgRight {
+    float: right;
+    margin-left: 10px;
+    margin-right: 35px;
+}

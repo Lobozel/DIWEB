@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>WIKI-WOLF</title>
+
+    <link rel="Shortcut Icon" href="icon/logo.ico" type="image/x-icon" />
+    <link href="css/estilo.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="css/navBar.css">
+
+
+  </head>
+  <body>
+    <nav id="navigation">
+      <a href="index.html" class="logo">WIKI-WOLF<span>®<span></a>
+          <ul class="links">
+            <li class="dropdown"><a href="index.html" class="trigger-drop">Especies<i
+                  class="arrow"></i></a>
+              <ul class="drop">
+                <li><a href="especies/lobo_gris.html">Lobo Gris</a></li>
+                <li><a href="especies/lobo_artico.html">Lobo Ártico</a></li>
+                <li><a href="especies/lobo_himalayo.html">Lobo Himalayo</a></li>
+                <li><a href="especies/lobo_iberico.html">Lobo Ibérico</a></li>
+                <li><a href="especies/lobo_rojo.html">Lobo Rojo</a></li>
+                <li><a href="especies/lobo_del_este.html">Lobo del Este</a></li>
+              </ul>
+            </li>
+            <li class="dropdown"><a href="informacion/informacion.html"
+                class="trigger-drop">Información<i class="arrow"></i></a>
+              <ul class="drop">
+                <li><a href="informacion/caracteristicas.html">Características</a></li>
+                <li><a href="informacion/alimentacion.html">¿Qué comen?</a></li>
+                <li><a href="informacion/habitat_y_distribuccion.html">Hábitat y
+                    distribución</a></li>
+                <li><a href="informacion/reproduccion.html">Reproducción</a></li>
+                <li><a href="informacion/lobos_en_peligro_de_extincion.html">En
+                    peligro de extinción</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+        </nav>
+        <br>
+        <div class="container mt-5 mb-3 bg-secondary">
+          <form>
+            <div class="form-group">
+              <label for="nom"><strong>Nombre:</strong></label>
+              <input type="test" class="form-control" id="nom"
+                placeholder="Nombre Apellido1 Apellido2">
+            </div>
+            <div class="form-group">
+              <label for="email"><strong>E-Mail:</strong></label>
+              <input type="email" class="form-control" id="email"
+                placeholder="correo@email.com">
+            </div>
+            <div class="form-group">
+              <label for="coment"><strong>Comentario:</strong></label>
+              <textarea class="form-control" id="coment" rows="3"
+                placeholder="Asunto"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>&nbsp;
+            <button type="reset" class="btn btn-info">Limpiar</button>
+          </form>
+          <br>
+        </div>
+
+      </body>
+    </html>

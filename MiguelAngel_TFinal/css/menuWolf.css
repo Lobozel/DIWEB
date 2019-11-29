@@ -1,0 +1,53 @@
+#wrap {
+      width: 980px;
+      left: -490px;
+      top: 6%;
+      margin-top: 52px;
+      margin-left: 50%;
+      position: relative;
+}
+
+#showcase {
+      height: 460px;
+}
+
+#showcase img {
+      cursor: pointer;
+      opacity: 0.6;
+}
+
+#item-title {
+      color: white;
+      font-weight: bolder;
+      font-size: 30px;
+      letter-spacing: 0.13em;
+      text-align: center;
+      margin-top: -20px;
+      margin-bottom: 32px;
+      font-family: "Century Gothic","Times New Roman", sans-serif;
+      text-shadow: 2px 2px blue;
+}
+
+.nav {
+      text-align: center;
+}
+
+.nav > button {
+      width: 60px;
+      height: 60px;
+      color: #fff;
+      text-align: center;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+}
+
+.cloud9-item{
+      transition: transform 0.8s;
+}
+
+.cloud9-item:hover{
+      transform: rotate(20deg);      
+}
+
+
