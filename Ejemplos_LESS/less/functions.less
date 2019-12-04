@@ -1,0 +1,22 @@
+@r: 15;
+@g: 34;
+@b: 45;
+@image: "rocket.png";
+@default-font: 1.1em;
+
+/**
+* For function reference
+* http://lesscss.org/functions/#misc-functions
+*/
+
+/**
+* color: converts a string into a color
+*/
+.block {
+    color: color(%("#%d%d%d",@r,@g,@b));
+    font-size: ceil(@default-font);
+}
+
+.menu {
+    width: width(@image);
+}
