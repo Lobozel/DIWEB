@@ -1,0 +1,100 @@
+/*
+Este CSS ha sido creado desde 0
+*/
+/*etiquetas que he modificado*/
+HEADER{
+    background:#345a8d;
+    color: white;
+}
+header::after{
+    margin-left: 550px;
+    font-weight: bolder;
+    content: "CURRICULUM VITAE";
+}
+
+.icons{
+    float: right;
+}
+.icon{
+    width: 20px;
+}
+
+ul{
+    list-style: none;
+}
+
+li{
+    background-color: rgb(8, 60, 158);
+}
+
+ul a{
+    COLOR: rgb(174, 246, 255);
+}
+
+ul a:hover{
+    background-color: #1984ff;
+    border-left: 10px solid rgb(2, 0, 99);
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-shadow: 1px 1px #fff;
+}
+/*Modificado que no esta en ENUNCIADO-ESTILOS-APLICAR.css*/
+#base1,#base1trabajos,#base1contactar {
+	background-color:#477abd;
+}
+
+#enlace{
+    transition: color 2s;
+}
+
+#enlace:hover{
+    color: black;
+    font-size: 22px;
+}
+/*clases creadas por mi*/
+.centrado{
+    text-align: center;
+}
+
+.info{
+    transition: color 0.8s;
+}
+
+.info:hover{
+    color: rgb(18, 18, 189);
+}
+
+.shadow{
+    text-shadow: 2px 2px 8px grey;
+}
+
+.subrayado{
+    text-decoration: underline;
+}
+
+li ul {
+    display:none;
+    position:absolute;
+    width:140px;
+}
+
+li:hover > ul {
+    display:block;
+}
+
+li ul li {
+    background-color: rgba(10, 69, 179, 0.774);
+    position:relative;
+    right:-360px;
+    top:-180px;
+}
+
+.imgCircle{
+    border-radius:50px;
+}
+
+footer{
+    color: white;
+    background:#345a8d;
+    text-align: center;
+}
