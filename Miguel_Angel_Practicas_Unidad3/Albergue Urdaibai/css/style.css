@@ -1,0 +1,13 @@
+body{
+    background-image: url("../resources/img/wallpaper.jpg");
+}
+.header{
+    text-align: center;
+}
+#typeArchives{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.colorChange{
+    filter: hue-rotate(360deg);
+}

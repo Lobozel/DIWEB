@@ -1,0 +1,6 @@
+Se pueden utilizar distintos tipos de archivos de imagen en una web:
+    JPEG
+    PNG
+    GIF
+No es recomendable utilizar Gifs debido a que se trata de una secuencia de varias imagenes,
+lo que generá que la página requiera de mayor trabajo para cargar los recursos y mostrarse.
