@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Reproductor de Vídeo - Gintama |</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script type="text/javascript" src="js/moving_title.js"></script>
+</head>
+<body>
+    <header class='ml-3'>
+        <h1>AMV's Gintama</h1>
+        <button id="btnPlay" class="btn btn-success">
+            Play <i class="glyphicon glyphicon-play"></i>
+        </button>
+        <button id="btnPause" class="btn btn-warning">
+            Pause <i class="glyphicon glyphicon-pause"></i>
+        </button>
+        <button id="btnStop" class="btn btn-danger">
+            Stop <i class="glyphicon glyphicon-stop"></i>
+        </button> 
+        <button id="btnRewind" class="btn btn-primary">
+            Rewind <i class="glyphicon glyphicon-fast-backward"></i>
+        </button>
+        <button id="btnPrev" class="btn btn-info">
+          Before <i class="glyphicon glyphicon-fast-backward"></i>
+        </button>
+        <button id="btnNext" class="btn btn-info">
+          Next <i class="glyphicon glyphicon-fast-backward"></i>
+        </button>
+        <button id="btnShuffle" class="btn btn-secondary">
+          Shuffle <i class="glyphicon glyphicon-fast-backward"></i>
+        </button>
+        <p>Esta viendo: <span id='info'></span></p>
+
+    </header>
+    <div class='text-center'>
+    <video id="myVideo" width="800px" class='ml-3 mb-3' controls >
+      <source src="resources/video/Gintama - Beat it AMV.mp4" type="video/mp4" />
+      Your browser does not support the &lt;video&gt; element. 
+    </video>
+  </div>
+    <script type="text/javascript" src="js/codigo.js"></script>
+
+</body>
+</html>

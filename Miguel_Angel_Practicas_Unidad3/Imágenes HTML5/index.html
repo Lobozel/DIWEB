@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Imagenes HTML5</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="css/style.css" rel="stylesheet">
+        <link rel="icon" type="image/png" href="resources/HTML5 LOGO Versiones/html5_icon.png"
+    </head>
+    <body style="background-color: lightskyblue;">
+    <div class="container mt-3 text-center">
+        Las distintas versiones del Logotivo de HTML5 se encuentran en <span class='blue'><a href="resources/HTML5 LOGO Versiones" title="Ruta Ejercicios HTML5 Logo con GIMP"><b>resources\HTML5 LOGO Versiones</b></a></span>
+
+        <table class="table table-sm table-dark mt-2">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="3">Etiqueta img</th>
+                </tr>
+                <tr>
+                    <th scope="row">JPG</th>
+                    <th scope="row">PNG</th>
+                    <th scope="row">GIF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class='normal' src="resources/img/jpg/fennec.jpg"></td>
+                    <td><img class='normal' src="resources/img/png/cute_grey_wolf.png"></td>
+                    <td><img class='normal' src="resources/img/gif/shiba.gif"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-3 text-center">
+        <table class="table table-sm table-dark">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="3">Etiquetas figure y figcaption</th>
+                </tr>
+                <tr>
+                    <th scope="row">JPG</th>
+                    <th scope="row">PNG</th>
+                    <th scope="row">GIF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><figure><img class='normal' src="resources/img/jpg/fox.jpg"><figcaption>¡Buenos días!</figcaption></figure></td>
+                    <td><figure><img class='normal' src="resources/img/png/save-koala.png"><figcaption>Debemos proteger el Amazonas</figcaption></figure></td>
+                    <td><figure><img class='normal' src="resources/img/gif/ebichu.gif"><figcaption>A los hamsters les encanta el queso</figcaption></figure></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container mt-5 mb-3">
+        <h3 class='mb-3'><u>Respuesta a <b>Cómo se genera un sprite</b></u></h3>
+        <p>Un <b>sprite</b> es un <b>mapa de bits</b>, generalmente compuesto por <b>varias imagenes pequeñas y un fondo transparente</b> o de color sólido.</p>
+        <p>Suelen utilizarse en <b>videojuegos</b> y su uso es similar al una carpeta de recursos de imágenes, es decir, podriamos tener un sprite de un personaje con distintas imagenes de este mismo en diferentes ángulos para posteriori crear el efecto de movimiento del personaje dentro del juego.</p>
+        <p>Existen programas para <b>crear, manipular y cortar sprites</b>, sin embargo, con cualquier editor de imágenes (como <b>GIMP</b>) podríamos hacerlo.</p>
+        <p>Tan solo necesitamos unir varias imágenes sin solaparlas en un mismo mapa de bits, a ser posible con fondo transparente y con alguna estructura que más adelante nos ayude a separar cada imagen para su uso.</p>
+        <p>Como he mencionado antes, existen programas para cortar sprites. Estos programas se utilizan para separar cada imagen contenida en el mapa de bits que representa el sprite en distintas imagenes JPEG o PNG.</p>
+        <br>
+        <p>Para usar un sprite en una <b>página Web</b> con <b>CSS</b> utilizamos las clases, creamos un <b>bloque</b> que represente y carge la imagen con <b>'*'</b> y una <b>clase por cada imagen</b> donde definamos su posición con <b>background-position.</b></p>
+        <p>Existen muchas otras formas, pero esta es la que voy a utilizar yo de ejemplo.</p>
+        <br>
+        <div class="card text-white bg-secondary">
+            <div class="card-body">
+                <h5 class="card-title">Código:</h5>
+                <span class='blue'>*</span>[<span class='light-blue'>sprite</span>]{
+                    <span class='light-blue'>background</span>: <span class='yellow-green'>url</span>(<span class='orange'>'../resources/img/sprite-dw.png'</span>) <span class='orange'>no-repeat top left</span>;
+                    <span class='light-blue'>width</span>: <span class='yellow-green'>127px</span>;
+                    <span class='light-blue'>height</span>: <span class='yellow-green'>195px</span>;
+                    <span class='light-blue'>display</span>: <span class='orange'>inline-block</span>;
+                }<br>
+                <span class='yellow'>.html</span>{
+                    <span class='light-blue'>background-position</span>: <span class='yellow-green'>0px 0px</span>;
+                }<br>
+                <span class='yellow'>.css</span>{
+                    <span class='light-blue'>background-position</span>: <span class='yellow-green'>-171px 0px</span>;
+                }<br>
+                <span class='yellow'>.js</span>{
+                    <span class='light-blue'>background-position</span>: <span class='yellow-green'>-340px 0px</span>;
+                }
+            </div>
+          </div>
+        <div class="html" sprite></div>
+        <div class="css" sprite></div>
+        <div class="js" sprite></div>
+    </div>
+        
+    </body>
+</html>

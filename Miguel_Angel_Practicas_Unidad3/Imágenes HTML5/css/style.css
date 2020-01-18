@@ -1,0 +1,50 @@
+.normal{
+    width: 200px;
+    height: 200px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+}
+figure {
+    flex-flow: column;
+    padding: 5px;
+    max-width: 210px;
+    margin: auto;
+}
+p {
+    text-indent: 2.5em
+}
+*[sprite]{
+    background: url('../resources/img/sprite-dw.png') no-repeat top left;
+    width: 127px;
+    height: 195px;
+    display: inline-block;
+}
+.html{
+    background-position: 0px 0px;
+}
+.css{
+    background-position: -171px 0px;
+}
+.js{
+    background-position: -340px 0px;
+}
+.blue{
+    color:#2c7ad6;
+}
+.light-blue{
+    color:#67cdfe;
+}
+.yellow-green{
+    color:#d0dc8b;
+}
+.yellow{
+    color: #d7c03d;
+}
+.orange{
+    color:#ce9178;
+}
