@@ -12,24 +12,24 @@ function iniciar(){
 
     solicitud.onupgradeneeded=function(e){
         bd=e.target.result;
-        bd.createObjectStore("gente", {keyPath: "clave"});
+        bd.createObjectStore("alumno", {keyPath: "dni"});
     }
 }
 function agregarobjeto(){
-    var clave=document.getElementById("clave").value;
-    var titulo=document.getElementById("texto").value;
-    var Fecha=document.getElementById("fecha").value;
-    var transaccion=bd.transaction(["gente"], "readwrite");
-    var almacen=transaccion.objectStore("gente");
-    var agregar=almacen.add({clave: clave, titulo: titulo, Fecha: Fecha});
+    var dni=document.getElementById("dni").value;
+    var nombre=document.getElementById("nombre").value;
+    var apellidos=document.getElementById("apellidos").value;
+    var transaccion=bd.transaction(["alumno"], "readwrite");
+    var almacen=transaccion.objectStore("alumno");
+    var agregar=almacen.add({dni: dni, nombre: nombre, apellidos: apellidos});
 
     agregar.addEventListener("success",mostrar,false);
 
-    document.getElementById("clave").value=""
+    document.getElementById("dni").value=""
 
-    document.getElementById("texto").value=""
+    document.getElementById("nombre").value=""
 
-    document.getElementById("fecha").value=""
+    document.getElementById("apellidos").value=""
 
 }
 
@@ -38,9 +38,9 @@ function mostrarDatos(e){
     if(cursor){
         zonadatos.innerHTML+=
         "<div>"+
-        cursor.value.clave +
-        " - " + cursor.value.titulo +
-        " - " + cursor.value.Fecha +
+        cursor.value.dni +
+        " - " + cursor.value.nombre +
+        " - " + cursor.value.apellidos +
         "</div>";
         cursor.continue();
     }
@@ -50,8 +50,8 @@ window.addEventListener("load",iniciar,false);
 
 function mostrar(){
     zonadatos.innerHTML="";
-    var transaccion=bd.transaction(["gente"],"readonly");
-    var almacen=transaccion.objectStore("gente");
+    var transaccion=bd.transaction(["alumno"],"readonly");
+    var almacen=transaccion.objectStore("alumno");
     var cursor=almacen.openCursor();
     cursor.addEventListener("success",mostrarDatos,false);
 }
