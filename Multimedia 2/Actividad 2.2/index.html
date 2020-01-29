@@ -9,7 +9,6 @@
     <body onload="alertaTras5seg()">
         Pulsa el botón para que esta página geolocalice al usuario.
         <div id="status">Location:</div>
-        <input type="button" value="Localizar" onclick="getLocation()"/>
         <script>
 
             var locationSave;
@@ -30,7 +29,7 @@
         function geoLocationSuccess(position){
             var location = "Latitud: " + position.coords.latitude; 
             location += ". Longitud: " + position.coords.longitude; 
-            if(location=locationSave){
+            if(location==locationSave){
                 color="red";
             }else{
                 color="green";
