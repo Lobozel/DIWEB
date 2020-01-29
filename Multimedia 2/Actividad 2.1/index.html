@@ -1,49 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <title>GEOLocation ejemplo sencillo</title>
+        <title>Actividad 2.1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+        <link href="indexed.css" rel="stylesheet">
+        <script src="indexed.js"></script>
+
     </head>
     <body>
-        Pulsa el botón para que esta página geolocalice al usuario.
-        <input type="button" value="Localizar" onclick="getLocation()"/>
-        <div id="status">Location:</div>
-        <script>
-        function getLocation() {
-            if(navigator && navigator.geolocation){
-                navigator.geolocation.getCurrentPosition(geoLocationSuccess, geoLocationError);
-            }else{
-                showMsg('El API de GeoLocation no funciona en este navegador');
-            }
-        }
-        function geoLocationSuccess(position){
-            var location = "Latitud: " + position.coords.latitude; 
-            location += ". Longitud: " + position.coords.longitude; 
-            showMsg(location);
-        }
-        function geoLocationError(err){
-            var msg = '';
+    <div id="contenedor">
+        <selection id="cajaformulario">
+            <form name="formulario">
+                <p>DNI:<br><input type="text" name="dni" id="dni"></p>
+                <p>Nombre:<br><input type="text" name="nombre" id="nombre"></p>
+                <p>Apellidos:<br><input type="text" name="apellidos" id="apellidos"></p>
+                <p><input type='button' name='grabar' id='grabar' value='Grabar'></p>
+            </form>
+        </selection>
 
-            switch(err.code) {
-                case 1: msg = 'El usuario no dio permiso';
-                break;
-                case 2: msg = 'Información no disponible';
-                break;
-                case 3: mnsg='Tiempo de espera agotado para la localizacion';
-                break;
-                default:msg='Error al solicitar localización';
-                break;
-            }
+        <section id="zonadatos">
+            Futuros Datos
+        </section>
+    </div>
 
-            showMsg(msg);
-        }
-        function showMsg(msg){
-            var status=document.getElementById("status");
-            status.innerHTML=msg;
-            console.log(msg);
-        }
-        </script>
+
     </body>
 </html>
