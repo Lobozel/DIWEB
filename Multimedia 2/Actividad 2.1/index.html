@@ -20,7 +20,7 @@
         }
         function geoLocationSuccess(position){
             var location = "Latitud: " + position.coords.latitude; 
-            location += "Latitud: " + position.coords.longitude; 
+            location += ". Longitud: " + position.coords.longitude; 
             showMsg(location);
         }
         function geoLocationError(err){
