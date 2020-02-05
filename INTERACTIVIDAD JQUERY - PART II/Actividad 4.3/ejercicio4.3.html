@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>Enunciado - Act. 4.3</title>
-		<!-- Ser�a recomendable incluir este c�digo de estilo en una CSS externa -->
+		<!-- Sería recomendable incluir este código de estilo en una CSS externa -->
 		<style>
 			table{
 				text-align: center;				
@@ -30,18 +31,33 @@
 			
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <script type="text/javascript">
+		<script type="text/javascript">
+		/*
+		He convertido la variable celdaPosicion en una variable global
+		cuyo valor se modifica al seleccionar que queremos modificar una fila
+		cargando en ella la primera celda de dicha fila.
+		De esta forma, no hay necesidad de volver a buscar y seleccionar la fila
+		cuando se modifiquen los valores de las celdas de la fila.
+		*/
+			var celdaPosicion;
+
             $(document).ready(function(){
 			
 				//Seleccionar
 				$(".seleccionar").on("click", function(){
+					if($(this).val()=="Seleccionar"){
+						$(this).parent().parent().addClass('seleccionado');
+						$(this).val("Deseleccionar");
+					}else{						
+						$(this).parent().parent().removeClass('seleccionado');
+						$(this).val("Seleccionar");
+					}
 					
-				
 				});
 				
 				//Borrar
 				$(".borrar").on("click", function(){
-									
+					$(this).parent().parent().remove();									
 				});
 				
 				//Insertar
@@ -50,6 +66,11 @@
 						var posicion = $("#posicion").val();
 						var nombre = $("#nombre").val();
 						var puntos = $("#puntos").val();
+						//Añadido por mi:
+						if(posicion.length==0 || nombre.length==0 || puntos.length==0){
+							alert("No puedes añadir celdas vacías.");
+							return;
+						}
 						
 						$("tbody tr:last").after("<tr><td>" + posicion + "</td><td>" + nombre + "</td>" +
 							"<td>" + puntos + "</td><td>" +
@@ -57,36 +78,35 @@
 							"<input type=\"button\" class=\"borrar\" value=\"Borrar\" />" +
 							"<input type=\"button\" class=\"modificar\" value=\"Modificar\" /></td></tr>");
 					} else {
-						var posiciones = $("tbody tr td:first-child");
-						var filaSeleccionada;
-						
-						posiciones.each(function(index, value){
-							if($(value).text() == $("#posicionTemp").val()){
-								filaSeleccionada = $(posiciones[index]).parent();
-								return false;
-							}
-						});
-						
-						primeraCeldaSeleccionada = $(filaSeleccionada).find("td:first");
-						primeraCeldaSeleccionada.text($("#posicion").val());
-						primeraCeldaSeleccionada.next().text($("#nombre").val());
-						primeraCeldaSeleccionada.next().next().text($("#puntos").val());
+						// var celdaPosicion = $(this).parent().parent().find("td:first"); 
+						celdaPosicion.text($("#posicion").val());
+						celdaPosicion.next().text($("#nombre").val());
+						celdaPosicion.next().next().text($("#puntos").val());
 					}
 					
 					resetearCampos();
 				});
+
 				
 				//Modificar
 				$(".modificar").on("click", function(){
-					var celdaPosicion = $(this).parent().parent().find("td:first"); 
+					celdaPosicion = $(this).parent().parent().find("td:first"); 
 					$("#posicion").val(celdaPosicion.text());					
 					$("#nombre").val(celdaPosicion.next().text());
 					$("#puntos").val(celdaPosicion.next().next().text());
 					
-					//Cambia el valor del bot�n a "Modificar"
+					//Cambia el valor del botón a "Modificar"
+					$("#insertar").val("Modificar");
 					
 					//Almacena el texto de la celdaPosicion en el campo #posicionTemp
-		
+					var posicion = $("#posicion").val();
+					var nombre = $("#nombre").val();
+					var puntos = $("#puntos").val();
+					//Añadido por mi:
+					if(posicion.length==0 || nombre.length==0 || puntos.length==0){
+						alert("No puedes añadir celdas vacías.");
+						return;
+					}
 				});
 
 				//Cancelar
@@ -96,19 +116,22 @@
 			});
 			
 			var resetearCampos = function(){
-				//Establece los valores del form a "", es decir, l�mpialos
-				
-				//Cambia el nombre del bot�n a "Insertar"
-				
+				//Establece los valores del form a "", es decir, límpialos
+				$("#posicion").val("");
+				$("#nombre").val("");
+				$("#puntos").val("");
+				//Cambia el nombre del botón a "Insertar"
+				$("#insertar").val("Insertar");				
 			};
-        </script>
+		</script>
+		
         
     </head>    
     <body>
         <table>
 			<thead>
 			<tr>
-				<th>Posici�n</th>
+				<th>Posición</th>
 				<th>Equipo</th>
 				<th>Puntos</th>
 				<th></th>
@@ -167,7 +190,7 @@
 				</tr>
 				<tr>
 					<td>6</td>
-					<td>Sporting de Gij�n</td>
+					<td>Sporting de Gijón</td>
 					<td>0</td>
 					<td>
 						<input type="button" class="seleccionar" value="Seleccionar" />
@@ -178,7 +201,7 @@
 			</tbody>
 		</table>		
 		<fieldset>
-		<label for="posicion">Posici�n</label>
+		<label for="posicion">Posición</label>
 		<input type="text" id="posicion" />
 		<label for="nombre">Nombre</label>
 		<input type="text" id="nombre" />
