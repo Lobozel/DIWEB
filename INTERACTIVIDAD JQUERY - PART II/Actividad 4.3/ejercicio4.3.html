@@ -42,23 +42,8 @@
 			var celdaPosicion;
 
             $(document).ready(function(){
-			
-				//Seleccionar
-				$(".seleccionar").on("click", function(){
-					if($(this).val()=="Seleccionar"){
-						$(this).parent().parent().addClass('seleccionado');
-						$(this).val("Deseleccionar");
-					}else{						
-						$(this).parent().parent().removeClass('seleccionado');
-						$(this).val("Seleccionar");
-					}
-					
-				});
-				
-				//Borrar
-				$(".borrar").on("click", function(){
-					$(this).parent().parent().remove();									
-				});
+
+				asignarEventos();
 				
 				//Insertar
 				$("#insertar").on("click", function(){
@@ -77,36 +62,17 @@
 							"<input type=\"button\" class=\"seleccionar\" value=\"Seleccionar\" />" +
 							"<input type=\"button\" class=\"borrar\" value=\"Borrar\" />" +
 							"<input type=\"button\" class=\"modificar\" value=\"Modificar\" /></td></tr>");
+
+						//Vuelvo a asignar los eventos a los botones para que la nueva fila también se vea afectada
+						asignarEventos();
+
 					} else {
-						// var celdaPosicion = $(this).parent().parent().find("td:first"); 
 						celdaPosicion.text($("#posicion").val());
 						celdaPosicion.next().text($("#nombre").val());
 						celdaPosicion.next().next().text($("#puntos").val());
 					}
 					
 					resetearCampos();
-				});
-
-				
-				//Modificar
-				$(".modificar").on("click", function(){
-					celdaPosicion = $(this).parent().parent().find("td:first"); 
-					$("#posicion").val(celdaPosicion.text());					
-					$("#nombre").val(celdaPosicion.next().text());
-					$("#puntos").val(celdaPosicion.next().next().text());
-					
-					//Cambia el valor del botón a "Modificar"
-					$("#insertar").val("Modificar");
-					
-					//Almacena el texto de la celdaPosicion en el campo #posicionTemp
-					var posicion = $("#posicion").val();
-					var nombre = $("#nombre").val();
-					var puntos = $("#puntos").val();
-					//Añadido por mi:
-					if(posicion.length==0 || nombre.length==0 || puntos.length==0){
-						alert("No puedes añadir celdas vacías.");
-						return;
-					}
 				});
 
 				//Cancelar
@@ -123,6 +89,55 @@
 				//Cambia el nombre del botón a "Insertar"
 				$("#insertar").val("Insertar");				
 			};
+
+			//Asigno los eventos a los distintos botones
+			//Esta funcion me permite ahorrar código
+			function asignarEventos(){			
+				//Seleccionar
+				$(".seleccionar").on("click", seleccionar);
+				
+				//Borrar
+				$(".borrar").on("click", borrar);
+				
+				//Modificar
+				$(".modificar").on("click", modificar);
+			}
+
+			/*
+			Necesitaba volver a asignar los eventos onclick de los botones seleccionar, borrar y modificar
+			Para no repetir código, he cambiado las funciones anonimas por funciones separadas
+			*/
+			function seleccionar(){
+					if($(this).val()=="Seleccionar"){
+						$(this).parent().parent().addClass('seleccionado');
+						$(this).val("Deseleccionar");
+					}else{						
+						$(this).parent().parent().removeClass('seleccionado');
+						$(this).val("Seleccionar");
+					}
+				}
+			function borrar(){
+				$(this).parent().parent().remove();	
+			}
+			function modificar(){
+					celdaPosicion = $(this).parent().parent().find("td:first"); 
+					$("#posicion").val(celdaPosicion.text());					
+					$("#nombre").val(celdaPosicion.next().text());
+					$("#puntos").val(celdaPosicion.next().next().text());
+					
+					//Cambia el valor del botón a "Modificar"
+					$("#insertar").val("Modificar");
+					
+					//Almacena el texto de la celdaPosicion en el campo #posicionTemp
+					var posicion = $("#posicion").val();
+					var nombre = $("#nombre").val();
+					var puntos = $("#puntos").val();
+					//Añadido por mi:
+					if(posicion.length==0 || nombre.length==0 || puntos.length==0){
+						alert("No puedes añadir celdas vacías.");
+						return;
+					}				
+			}
 		</script>
 		
         
