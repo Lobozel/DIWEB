@@ -19,6 +19,7 @@
         // 3. Muestra las listas al pasar por encima el ratón por el párrafo con el texto Primero o Segundo y sus listas siguientes y ocultar al retirarlo.  La informaciónTardará en aparecer(show) y desparecer (hide)  5 segundos(debes pasarlo a milisegundos).
         $(document).ready(function(){
             alert($("ul").length)
+            $("ul:first-of-type li:odd").addClass("fondo");
             $("ul:last-child li:odd").addClass("fondo");
             $("p").mouseover(function(){
                 $(this).next().hide("5000");
