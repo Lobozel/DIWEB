@@ -17,6 +17,16 @@
 		// 2. Aplique la clase fondo a los elementos pares de la lista(el último hijo de la lista)
 			
         // 3. Muestra las listas al pasar por encima el ratón por el párrafo con el texto Primero o Segundo y sus listas siguientes y ocultar al retirarlo.  La informaciónTardará en aparecer(show) y desparecer (hide)  5 segundos(debes pasarlo a milisegundos).
+        $(document).ready(function(){
+            // alert($("ul").length)
+            $("ul:last-child li:odd").addClass("fondo");
+            $("p").mouseover(function(){
+                $(this).next().hide("5000");
+            })
+            $("p").mouseout(function(){
+                $(this).next().show("5000");
+            })
+        });
     </script>
 </head>
 
