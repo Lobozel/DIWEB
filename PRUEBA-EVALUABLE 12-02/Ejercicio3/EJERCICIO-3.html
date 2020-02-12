@@ -12,7 +12,22 @@
         // Eliminar el segundo y quinto elemento
         // Eliminar los dos últimos elementos.
         $(document).ready(function(){
-
+            //Añado mensajes de alert para ver las diferencias:
+            alert("Añadiendo item al final")
+            $("ul").append("<li>otro item al final</li>");
+            alert("Añadiendo item al principio")
+            $("ul").prepend("<li>otro item al principio</li>");
+            alert("Elimino item al final")
+            $("li:last-child").remove();
+            alert("Elimino item al principio")
+            $('li:first-child').remove();
+            alert("Elimino el segundo y quinto item")
+            $("li:eq(1), li:eq(6)").remove();//como el índice empieza por 0, el segundo elemento es el 1
+            // y el quinto elemento es el 6
+            alert("Elimino los dos últimos items")
+            //Para eliminar los dós ultimos, elimino el último dos veces
+            $("li:last-child").remove();
+            $("li:last-child").remove();
         });
     </script>
 </head>
