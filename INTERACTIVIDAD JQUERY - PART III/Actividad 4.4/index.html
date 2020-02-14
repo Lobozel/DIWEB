@@ -1,44 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ejercicio 4.4</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/codigo.js"></script>
 </head>
-
 <body>
     <h1>jQuery form event - focus(), change(), blur(), select(), submit() example</h1>
-    <form action="" id="f">
+    <form action="">
         <table>
             <tr>
                 <td>TexBox:</td>
-                <td><input type="text" id="campoText"></td>
-                <td id="tbt"></td>
+                <td><input type="text"></td>
             </tr>
             <tr>
                 <td>TextArea:</td>
-                <td><textarea id="textArea" cols="30" rows="10"></textarea></td>
-                <td id="tat"></td>
+                <td><textarea cols="30" rows="10"></textarea></td>
             </tr>
             <tr>
                 <td>Radio:</td>
                 <td>
-                    <input type="radio" name="s" id="hombre" checked>Male
-                    <input type="radio" name="s" id="mujer">Famela
+                    <input type="radio" name="s" checked>Male
+                    <input type="radio" name="s" >Female
                 </td>
-                <td id="rt"></td>
             </tr>
             <tr>
                 <td>Checkbox:</td>
-                <td><input type="checkbox" id="checkBox">Check Me</td>
-                <td id="cbt"></td>
+                <td><input type="checkbox">Check Me</td>
             </tr>
             <tr>
                 <td>Country:</td>
                 <td>
-                    <select id="select">
+                    <select>
                         <option value="p1">China</option>
                         <option value="p2">España</option>
                         <option value="p3">Japón</option>
@@ -48,20 +44,14 @@
                         <option value="p7">Argentina</option>
                     </select>
                 </td>
-                <td id="st"></td>
             </tr>
             <tr>
                 <td colspan="2">
                     <input type="submit" value="Enviar">
                     <input type="reset" value="Restablecer">
                 </td>
-                <td id="bt"></td>
             </tr>
         </table>
     </form>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="4.4.js"></script>
 </body>
-
 </html>
