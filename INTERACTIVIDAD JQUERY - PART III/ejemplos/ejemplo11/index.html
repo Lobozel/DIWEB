@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            p{margin:0;color:blue;}
+            div,p{margin-left: 10px;}
+            span{color:red;}
+        </style>
+    </head>
+    <body>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $("form").submit(function(){
+                //si en el primer input se introduce el valor correcto
+                if($("input:first").val()=="correcto"){
+                    //en el span pone el texto válido
+                    $("span").text("Válidado....");
+                    return true;
+                }
+                //sino en span pone Inválido y lo hace desaparecer
+                $("span").text("INVálidado....").fadeOut(1000);
+                return false;
+            })
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .test{
+                height: 100px; width: 100px;
+                background-color: red;
+            }
+            .inside{
+                height: 100px; width: 100px;
+                background-color: blue;
+            }
+            .outside{
+                height: 100px; width: 100px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="text"> lugar para aplicar clase </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $("div.test").blind({
+                mouseenter:function(){ // al entrar con el mouse
+                    $(this).addClass("inside");
+                },
+                mouseleave:function(){ // al salir con el mouse
+                    $(this).addClass("outside");
+                }
+            });
+        </script>
+
+    </body>
+</html>

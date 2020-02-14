@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form>
+            <input type="text" id="campi1" value="campo1">
+            <input type="text" value="campo2">
+        </form>
+        <div> Disparador del evento handler está ligado al primer input </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //al salir del campo1 se activa el blur
+            $("#campo1").blur(function(){
+                document.write("Se ha llamado a handler para blur");
+            });
+        </script>
+
+    </body>
+</html>

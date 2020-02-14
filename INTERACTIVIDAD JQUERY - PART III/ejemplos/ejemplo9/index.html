@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <form>
+        <input type="text" id="tarea" value="campo1">
+        <input type="text" value="campo2">
+    </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //el evento se liga al campo1 y se desencadena blur
+            $("#tarea").on("blur",
+            function(){
+                document.write("El disparador blur ha sido llamado")
+            });
+        </script>
+
+    </body>
+</html>

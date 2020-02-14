@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <p>
+        <input type="text">
+        <span style="display: none;">Encendido el foco</span>
+    </p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //al poner el foco en input
+            $("input").focus(function(){
+                //hace visible el párrafo con css
+                //y luego lo oculta con fadeOut durante 1000 segundos
+                $(this).next("span").css("display","inline").fadeOut(1000);
+            });
+        </script>
+
+    </body>
+</html>

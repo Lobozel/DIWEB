@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <form>
+        <select class="opciones">
+            <option value="opcion1">Opción1</option>
+            <option value="opcion2">Opción2</option>
+        </select>
+    </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //avisa cuando cambia de opción seleccionada
+            $(".opciones").change(function(){
+                document.write("Se ha cambiado de opción");
+            });
+        </script>
+
+    </body>
+</html>

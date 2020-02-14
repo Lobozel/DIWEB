@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            ul{margin-left: 20px;color: blue;}
+            li{cursor: default;}
+            span{color: red;}
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Leche</li>
+            <li>Pan</li>
+            <li class="fade">Galletas</li>
+            <li class="fade">Calcetines</li>
+        </ul>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            //al pasar el ratón por los elementos de la lista
+            $("li").hover(
+                function(){
+                    //añade ****
+                    $(this).append("<span>****</span>");
+                },
+                function(){
+                    //encuentra la última tira de **** y la borra
+                    $(this).find("span:last").remove();
+                }
+            );
+            //al pasar por los elementos de fade los desaparecer y aparece
+            $("li.fade").hover(function(){
+                $(this).fadeOut(100);
+                $(this).fadeIn(100);
+            });
+        </script>
+
+    </body>
+</html>
