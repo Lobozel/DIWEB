@@ -37,7 +37,38 @@
 		 <script type="text/javascript" src="js/modernizr-custom.js"></script>
         <script type="text/javascript" src="js/polyfiller.js"></script>
         <script type="text/javascript">
+        //Todos los inputs, excepto los botones, requeridos
+           $("input").not(":button").not(":submit").attr("required","");
+           //Añadir placeholder
+           $("#username").attr("placeholder","Nombre de usuario");
+           $("#password").attr("placeholder","Contraseña");
+           //Tamaño máximo
+           $("#username").attr("maxlength","30");
+           $("#password").attr("maxlength","12");
+           //Constantes de inicio de sesión
+           const user = "Usuario";
+           const pass = "Usuario123";
+           //Muestro por log para facilitar el test
+           console.log("El usuario es: "+user);
+           console.log("La contraseña es: "+pass);
+           //Al pulsar el login
+            
            
+           //Código recuperado del ejemplo5
+            //al hacer click en los botones con id se produce el efecto
+            $("#bounce").click(function(){
+                $("#loginSample").effect("bounce");
+            });
+            $("#highlight").click(function(){
+                $("#loginSample").effect("highlight");
+            });
+            $("#pulsate").click(function(){
+                $("#loginSample").effect("pulsate");
+            });
+            $("#shake").click(function(){
+                $("#loginSample").effect("shake");
+            });
+            $.webshims.polyfill();//para que sea visible en todos los navegadores
         </script>
     </body>
 </html>
