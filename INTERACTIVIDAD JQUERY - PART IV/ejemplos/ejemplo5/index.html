@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{font:normal 12px arial, verdana;}
+        </style>
+    </head>
+    <body>
+    <form id="loginsimple" style="border:3px solid red; width:300px; padding:6px">
+        <p>
+            <label for="username"> Nombreusuario</label>
+            <input id="username" type="text">
+        </p>
+        <p>
+            <label for="password"> Contraseña</label>
+            <input id="password" type="text">
+        </p>
+        <p>
+            <input type="submit" value="Login">
+        </p>
+    </form>
+    <p>
+        <input type="button" id="bounce" value="Bounce">
+        <input type="button" id="highlight" value="Highlight">
+        <input type="button" id="pulsate" value="Pulsate">
+        <input type="button" id="shake" value="Shake">
+    </p>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--NUEVA LIBRERÍA PARA EL UI-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            //al hacer click en los botones con id se produce el efecto
+            $("#bounce").click(function(){
+                $("#loginsimple").effect("bounce");
+            });
+            $("#highlight").click(function(){
+                $("#loginsimple").effect("highlight");
+            });
+            $("#pulsate").click(function(){
+                $("#loginsimple").effect("pulsate");
+            });
+            $("#shake").click(function(){
+                $("#loginsimple").effect("shake");
+            });
+            $.webshims.polyfill();//para que sea visible en todos los navegadores
+        </script>
+
+    </body>
+</html>

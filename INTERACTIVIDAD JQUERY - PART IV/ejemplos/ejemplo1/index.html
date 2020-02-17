@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <p id="uno" style="display:none">Hola1</p>
+        <a href="#">Pulsa en este enlace</a>
+        <p id="dos" style="display:none">Hola2</p>
+        <button>Pulsa en este botón</button>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("p").show();//muestra párrafo oculto
+                $("a").click(function(){//al hacer clic en el enlace
+                    $("#uno").hide();//oculta párrafo visible
+                    $(this).hide();//oculta enlace
+                });
+                $("button").click(function(){//al hacer clic en botón
+                    $("#dos").toggle(); //aparece o desaparece
+                });
+            });
+        </script>
+
+    </body>
+</html>
