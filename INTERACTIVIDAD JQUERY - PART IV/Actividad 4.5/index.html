@@ -8,6 +8,9 @@
             * {
                 font: normal 12px arial, verdana;
             }
+            .errorCode {
+                border: 2px solid red;
+            }
         </style>
     </head>
     <body>
@@ -32,13 +35,30 @@
             <input type="button" id="shake" value="Shake">
         </p>
 
+        <!--Dialog en HTML con el mensaje-->
+        <div id="dialog" title="¡Has iniciado sesión!">
+            <p>Enhorabuena, ya has iniciado sesión.</p>
+          </div>
+
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js"></script>
 		 <script type="text/javascript" src="js/modernizr-custom.js"></script>
         <script type="text/javascript" src="js/polyfiller.js"></script>
         <script type="text/javascript">
+        //Declaración de dialogo
+        $("#dialog").dialog({
+            autoOpen : false, modal : true, show : "blind", hide : "blind"
+        });
         //Todos los inputs, excepto los botones, requeridos
            $("input").not(":button").not(":submit").attr("required","");
+           //verifico que no esten vacios con evento blur
+           $("#username, #password").blur(function(){
+                if($(this).val().trim()==""){
+                    mensajeError(this,"El campo "+$(this).attr('id')+" no puede estar vacio");
+                }else{
+                    limpiarErrores(this);
+                }
+           });
            //Añadir placeholder
            $("#username").attr("placeholder","Nombre de usuario");
            $("#password").attr("placeholder","Contraseña");
@@ -46,13 +66,42 @@
            $("#username").attr("maxlength","30");
            $("#password").attr("maxlength","12");
            //Constantes de inicio de sesión
-           const user = "Usuario";
+           const user = "usuario";
            const pass = "Usuario123";
            //Muestro por log para facilitar el test
            console.log("El usuario es: "+user);
            console.log("La contraseña es: "+pass);
+           //eliminar onsubmit, sino intentará validar en php
+           $("#loginSample").on('submit', function(e) {
+                e.preventDefault();
+            });
            //Al pulsar el login
-            
+            $("#loginSample").submit(function(){
+                if($("#username").val().toLowerCase().trim()==user && $("#password").val().trim()==pass){
+                    limpiarErrores(this);
+                    $("#dialog").dialog("open");//muestro el dialog
+                }else{
+                    mensajeError(this,"Usuario o contraseña incorrectos");
+                    effectShake();
+                }
+            });
+
+            //Funciones reutilizables
+           function mensajeError(e,txt){
+            limpiarErrores(e);
+            $(e).addClass('errorCode');
+            $(e).after("<h3 style='color:red;'>&nbsp;&nbsp;"+txt+"</h3>");
+           }
+
+           function limpiarErrores(e){
+            //borra todos los hermanos con la etiqueta h3, es decir, todos los mensajes de error que se hayan podido generar
+            $(e).nextAll("h3").remove();
+            $(e).removeClass('errorCode');                    
+           }
+
+           function effectShake(){
+                $("#loginSample").effect("shake");
+            }
            
            //Código recuperado del ejemplo5
             //al hacer click en los botones con id se produce el efecto
@@ -65,9 +114,8 @@
             $("#pulsate").click(function(){
                 $("#loginSample").effect("pulsate");
             });
-            $("#shake").click(function(){
-                $("#loginSample").effect("shake");
-            });
+            $("#shake").click(effectShake);
+            
             $.webshims.polyfill();//para que sea visible en todos los navegadores
         </script>
     </body>
