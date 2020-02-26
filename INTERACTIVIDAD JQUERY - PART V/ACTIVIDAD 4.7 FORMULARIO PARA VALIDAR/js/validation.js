@@ -1,8 +1,5 @@
 $(document).ready(function(){
-//eliminar onsubmit, sino intentará validar en php
-$("#loginSample").on('submit', function(e) {
-    e.preventDefault();
-});
+
 
     $("#orderForm").validate({
         rules: {
