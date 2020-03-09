@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Práctica JQuery Movile</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet"
+            href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    </head>
+    <body>
+        <!-- El data-role="page" es la página que se muestra en el navegador -->
+        <div data-role="page" style="background-color: cyan;">
+            <!-- El data-role="header" crea una barra de herramientas en la parte superior -->
+            <div class='text-center mt-3' data-role="header">
+                <h1>Elementos de JQuery Mobile</h1>
+            </div>
+            <!-- El data-role="main" define el contenido de la página -->
+            <!-- La clase "ui-content" añade el acolchado adicional y el margen dentro del contenido del a página -->
+            <div data-role="main" class="ui-content">
+                <div class="container mt-3 text-center">
+                    <!-- data-role="fieldcontain" se utiliza para ayudar a agrupar los elementos visualmente en una forma más larga -->
+                    <!-- type='text' permite recopilar información alfanumérica a través de un cuadro de texto donde puede escribir el usuario -->
+                    <!-- El atributo for debe tener el mismo ID que el input para que la etiqueta label coincida con este. Esto es meramente visual -->
+                    <div data-role="fieldcontain">
+                        <label for="name">Alumno:</label>
+                        <input type="text" name="name" id="name"
+                            placeholder="Miguel Ángel" />
+                    </div>
+                    <!-- data-role="slider" define un interruptor binario (verdadero/falso) -->
+                    <!-- El atributo for debe tener el mismo ID que el select para que la etiqueta label coincida con este. Esto es meramente visual -->
+                    <div data-role="fieldcontain">
+                        <label for="flip-b">Aprobar:</label>
+                        <select name="slider" id="flip-b" data-role="slider">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </div>
+                    <!-- data-icon="IDicon" permite agregar un icono predefinido -->
+                    <!-- Lista de iconos: https://demos.jquerymobile.com/1.4.5/icons/ -->
+                    <!-- El atributo for debe tener el mismo ID que el select para que la etiqueta label coincida con este. Esto es meramente visual -->
+                    <div data-role="fieldcontain">
+                        <label for="select-choice-1" class="select">Razón para aprobar al alumno:</label>
+                        <select name="select-choice-1" id="select-choice-1" data-icon="check">
+                            <option>Me cae bien</option>
+                            <option>Atiende en clase</option>
+                            <option>Sabe más que yo</option>
+                            <option>Es muy guapo</option>
+                        </select>
+                    </div>                    
+                    <!-- type="range" otorga un control deslizante para poder escoger una cifra númerica entre un valor mínimo y un valor máximo -->
+                    <!-- no requiere data-role -->
+                    <!-- data-theme y data-track-theme agrega un tema tanto a la entrada como al controlador de la pista. El tema se selecciona con una letra de la a-z -->
+                    <!-- El atributo for debe tener el mismo ID que el input para que la etiqueta label coincida con este. Esto es meramente visual -->
+                    <div data-role="fieldcontain">
+                        <label for="slider">Nota a Poner:</label>
+                        <input type="range" name="slider" id="slider" value="10"
+                            min="0" max="10" data-theme="a" data-track-theme="b" />
+                    </div>
+                    <!-- type="checkbox" crea una casilla de verificación -->
+                    <!-- no requiere data-role -->
+                    Acepte los términos.
+                    Cualquier nota establecida anteriormente se convertirá en un
+                    10.
+                    <div data-role="fieldcontain">
+                    <input type="checkbox" name="checkbox-1" id="checkbox-0"
+                        class="custom" />
+                    <label for="checkbox-0">I agree</label>
+                    <!-- data-role="button" cambia el diseño de cualquier enlace (<a>) por el de un botón -->
+                    <a href="aprobado.html" data-role="button">Aprobar</a>
+                </div>
+                </div>
+            </div>
+            <!-- El data-role="footer" crea una barra de herramientas en la parte inf -->
+            <div data-role="footer" class='text-center bg-info'>
+                <span class='font-weight-bold'>© 2020 Copyright:</span>
+                <span>Miguel Ángel</span>
+            </div>
+        </div>
+
+
+    </body>
+</html>
